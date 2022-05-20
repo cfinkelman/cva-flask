@@ -5,4 +5,5 @@ venv\Scripts\activate
 pip uninstall -r requirements.txt -y
 pip install -r requirements.txt
 pip freeze > requirements.txt
+python -m flask run
 ```
