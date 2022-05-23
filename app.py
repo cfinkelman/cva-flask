@@ -4,15 +4,18 @@ import re
 
 app = Flask(__name__)
 
-@app.route("/")
-def home():
-    return "Hello, Flask!"
-
-@app.route("/hello/")
-@app.route("/hello/<name>")
-def hello_there(name = None):
+@app.route("/report/<report_type>")
+def report(report_type = None):
     return render_template(
-        "hello_there.html",
+        "report.html",
+        report_type=report_type
+    )
+
+@app.route("/test/")
+@app.route("/test/<name>")
+def test(name = None):
+    return render_template(
+        "test.html",
         name=name,
         date=datetime.now()
     )
