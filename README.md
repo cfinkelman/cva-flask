@@ -13,3 +13,16 @@ RCIGM Custom Variant Analysis Report second controle in third colume currently l
 what is the input -lab director title-
 charicter limits
 Do we want to block changes to some preprop feilds?
+Do we want to display error messages for validation?
+How do we know a SNV is negative?
+CNV EVENT how is write in supposed to work?
+
+# Done
+prepop function
+validation function
+
+# Steps
+change Index Family Member to Input Label
+change Report Date Label to Input
+other forms
+other option for director
