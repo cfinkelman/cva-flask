@@ -29,8 +29,8 @@ body{
     box-sizing: border-box;
 }
 
-h3, h4{
-  margin: 0;
+h3, h4, h5{
+  margin: 0 0 3px 0;
 }
 
 @media only screen and (min-width: 8.5in) {
@@ -114,7 +114,6 @@ label{
   gap: 2px;
   font-size: 6pt;
   font-weight: bolder;
-  border-top: 2px solid  #01a4b3;
   border-bottom: 2px solid  #01a4b3;
   padding: 5px;
 }
@@ -135,15 +134,10 @@ label{
   grid-template-rows: 1fr;
 }
 
-.subsection h3{
-  margin: 0;
+.subsection h3, .subsection h5{
   color: var(--color-dark-blue);
   font-weight: normal;
-}
-
-.subsection>div{
-  border-top: 2px solid #01a4b3;
-  padding-top: 3px;
+  border-bottom: 2px solid #01a4b3;
 }
 
 .sequence_variant{
@@ -151,10 +145,9 @@ label{
   font-weight: bold;
 }
 
-.six_column_row{
+.many_column_row{
   display: grid;
-  grid-template-columns: repeat(6, auto);
-  grid-auto-flow: column;    justify-content: stretch;
+  grid-auto-flow: column;
   align-items: end;
   gap: 2px;
 }
@@ -201,4 +194,12 @@ label{
 
 select[value="other"] { 
   background-color: yellow;
+}
+
+.height1{
+  height: 1in;
+}
+
+.height2{
+  height: 2in;
 }

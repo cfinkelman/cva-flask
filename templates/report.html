@@ -95,14 +95,14 @@
                             <label for="test_results"><h3>TEST RESULTS: </h3></label>
                             <div class="test_results">
                             </div>
-                            <textarea id="test_results" name="test_results"  cols="110" rows="5" wrap="hard" maxlength="560"></textarea>
+                            <textarea id="test_results" name="test_results"  wrap="hard" class="height1"></textarea>
                         </div>
                     </section>
                     {% if report_type == "SNV" %}
                         <section class="subsection">
-                            <h3>SEQUENCE VARIANT</h3>
+                            <h5>SEQUENCE VARIANT</h5>
                             <div class="sequence_variant">
-                                <div class="six_column_row">
+                                <div class="many_column_row">
                                     <div id="cnt_div_confirmation_status" class="control_group">
                                         <label for="confirmation_status">CONFIRMATION STATUS</label>
                                         <textarea id="confirmation_status" name="confirmation_status"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
@@ -136,9 +136,9 @@
                     {% endif %}
                     {% if report_type == "CNV" %}
                     <section class="subsection">
-                        <h3>COPY NUMBER VARIANT</h3>
+                        <h5>COPY NUMBER VARIANT</h5>
                         <div class="copy_number_variant">
-                            <div class="six_column_row">
+                            <div class="many_column_row">
                                 <div id="cnt_div_variant_status" class="control_group">
                                     <label for="variant_status">VARIANT STATUS</label>
                                     <textarea id="variant_status" name="variant_status"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
@@ -179,18 +179,18 @@
                 {% endif %}
                     <section class="subsection">
                         <div id="cnt_div_interpretation" class="control_group">
-                            <label for="interpretation"><h3>INTERPRETATION</h3></label>
+                            <label for="interpretation"><h5>INTERPRETATION</h5></label>
                             <div>
                             </div>
-                            <textarea id="interpretation" name="interpretation"  cols="110" rows="5" wrap="hard" maxlength="560"></textarea>
+                            <textarea id="interpretation" name="interpretation" wrap="hard" class="height1"></textarea>
                         </div>
                     </section>
                     <section class="subsection">
                         <div id="cnt_div_methodology_limitations_regulatory_disclosures" class="control_group">
-                            <label for="methodology_limitations_regulatory_disclosures"><h3>METHODOLOGY, LIMITATIONS, & REGULATORY DISCLOSURES</h3></label>
+                            <label for="methodology_limitations_regulatory_disclosures"><h5>METHODOLOGY, LIMITATIONS, & REGULATORY DISCLOSURES</h5></label>
                             <div>
                             </div>
-                            <textarea id="methodology_limitations_regulatory_disclosures" name="methodology_limitations_regulatory_disclosures"  cols="110" rows="9" wrap="hard" maxlength="990"></textarea>
+                            <textarea id="methodology_limitations_regulatory_disclosures" name="methodology_limitations_regulatory_disclosures"  wrap="hard"  class="height2"></textarea>
                         </div>
                     </section>
                 </div>

@@ -26,3 +26,11 @@ change Index Family Member to Input Label
 change Report Date Label to Input
 other forms
 other option for director
+
+# Templates
+Template CVA External Lab_1 SNV (1).pdf => SNV
+Template CVA External Lab_1 SNV.pdf => SNV
+Template CVA_1 CNV positive.pdf
+Template CVA_1 Mito positive.pdf
+Template CVA_1 SNV positive.pdf
+Template CVA_2 SNV negative.pdf
