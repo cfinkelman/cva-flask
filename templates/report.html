@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>CVA FORM</title>
+        <title>{{ report_type }} FORM</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -16,92 +16,186 @@
                         <h3 class="coolblue">RCIGM Custom Variant Analysis Report</h3>
                         <div class="control_panel">
                             <div class="col">
-                                <label for="patient_name" >PATIENT NAME</label>
-                                <input type="text" id="patient_name" name="patient_name" />
-                                <label for="sex" >SEX</label>
-                                <select type="text" id="sex" name="sex">
-                                    <option value="Select">Select</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Male">Female</option>
-                                    <option value="Male">Not Specified</option>
-                                </select>
-                                <label for="date_of_birth" >DATE OF BIRTH</label>
-                                <input type="date" id="date_of_birth" name="date_of_birth" />
-                                <label for="indication_for_testing" >INDICATION FOR TESTING</label>
-                                <input type="text" id="indication_for_testing" name="indication_for_testing" />
-                                <label for="test_type" >TEST TYPE</label>
-                                <textarea id="test_type" name="test_type" cols="32" rows="2" wrap="hard" maxlength="58"></textarea>
+                                <div id="cnt_div_patient_name" class="control_group hrz_control_group">
+                                    <label for="patient_name">PATIENT NAME</label>
+                                    <input type="text" id="patient_name" name="patient_name" data-id="patient_name" />
+                                </div>
+                                <div id="cnt_div_sex" class="control_group hrz_control_group">
+                                    <label for="sex" >SEX</label>
+                                    <select type="text" id="sex" name="sex">
+                                        <option value="Select">Select</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="notspecified">Not Specified</option>
+                                    </select>
+                                </div>
+                                <div id="cnt_div_date_of_birth" class="control_group hrz_control_group">
+                                    <label for="date_of_birth" >DATE OF BIRTH</label>
+                                    <input type="date" id="date_of_birth" name="date_of_birth" data-id="dob" />
+                                </div>
+                                <div id="cnt_div_indication_for_testing" class="control_group hrz_control_group">
+                                    <label for="indication_for_testing" >INDICATION FOR TESTING</label>
+                                    <input type="text" id="indication_for_testing" name="indication_for_testing" />
+                                </div>
+                                <div id="cnt_div_test_type" class="control_group hrz_control_group">
+                                    <label for="test_type" >TEST TYPE</label>
+                                    <textarea id="test_type" name="test_type" cols="32" rows="2" wrap="hard" maxlength="58"></textarea>
+                                </div>
                             </div>
                             <div class="col">
-                                <label for="ordering_provider">ORDERING PROVIDER</label>
-                                <input type="text" id="ordering_provider" name="ordering_provider" />
-                                <label for="hospital">HOSPITAL</label>
-                                <textarea id="hospital" name="hospital" cols="32" rows="2" wrap="hard" maxlength="58"></textarea>
-                                <label for="specimen">SPECIMEN</label>
-                                <select type="text" id="specimen" name="specimen">
-                                    <option value="Select">Select</option>
-                                    <option value="Blood">Blood</option>
-                                    <option value="Saliva">Saliva</option>
-                                    <option value="DNA">DNA (Extracted)</option>
-                                </select>
-                                <label for="collected">COLLECTED</label>
-                                <input type="date" id="collected" name="collected" />
-                                <label for="received">RECEIVED</label>
-                                <input type="date" id="received" name="received" />
+                                <div id="cnt_div_ordering_provider" class="control_group hrz_control_group">
+                                    <label for="ordering_provider">ORDERING PROVIDER</label>
+                                    <input type="text" id="ordering_provider" name="ordering_provider" />
+                                </div>
+                                <div id="cnt_div_hospital" class="control_group hrz_control_group">
+                                    <label for="hospital">HOSPITAL</label>
+                                    <textarea id="hospital" name="hospital" cols="32" rows="2" wrap="hard" maxlength="58"></textarea>
+                                </div>
+                                <div id="cnt_div_specimen" class="control_group hrz_control_group">
+                                    <label for="specimen">SPECIMEN</label>
+                                    <select type="text" id="specimen" name="specimen">
+                                        <option value="select">Select</option>
+                                        <option value="blood">Blood</option>
+                                        <option value="saliva">Saliva</option>
+                                        <option value="dna">DNA (Extracted)</option>
+                                    </select>
+                                </div>
+                                <div id="cnt_div_collected" class="control_group hrz_control_group">
+                                    <label for="collected">COLLECTED</label>
+                                    <input type="date" id="collected" name="collected" />
+                                </div>
+                                <div id="cnt_div_received" class="control_group hrz_control_group">
+                                    <label for="received">RECEIVED</label>
+                                    <input type="date" id="received" name="received" />
+                                </div>
                             </div>
                             <div class="col">
-                                <label for="rcigm_case_id">RCIGM CASE ID</label>
-                                <input type="text" id="rcigm_case_id" name="rcigm_case_id" />
-                                <label for="index_family_member_id">INDEX FAMILY MEMBER ID</label>
-                                <input type="text" id="index_family_member_id" name="index_family_member_id" />
-                                <label for="report_date">REPORT DATE</label>
-                                <input type="date" id="report_date" name="report_date" />
+                                <div id="cnt_div_case_id" class="control_group hrz_control_group">
+                                    <label for="case_id">RCIGM CASE ID</label>
+                                    <input type="text" id="case_id" name="case_id" data-id="case_id" />
+                                </div>
+                                
+                                    <div id="cnt_div_index_family_member_id" class="control_group hrz_control_group">
+                                        <label for="index_family_member_id">
+                                            {% if report_type == "SNV" %} INDEX FAMILY MEMBER ID
+                                            {% else %} ORIGINAL RCIGM PROBAND ID
+                                            {% endif %}
+                                        </label>
+                                        <input type="text" id="index_family_member_id" name="index_family_member_id" />
+                                    </div>
+                                <div id="cnt_div_report_date" class="control_group hrz_control_group">
+                                    <label for="report_date">REPORT DATE</label>
+                                    <input type="date" id="report_date" name="report_date" />
+                                </div>
                             </div>
                         </div>
                     </section>
                     <section class="test_results_section">
-                        <label for="test_results"><h3>TEST RESULTS: </h3></label>
-                        <div class="test_results">
+                        <div id="cnt_div_test_results" class="control_group">
+                            <label for="test_results"><h3>TEST RESULTS: </h3></label>
+                            <div class="test_results">
+                            </div>
                             <textarea id="test_results" name="test_results"  cols="110" rows="5" wrap="hard" maxlength="560"></textarea>
                         </div>
                     </section>
-                    <section class="subsection">
-                        <h3>SEQUENCE VARIANT</h3>
-                        <div class="sequence_variant">
-                            <div class="six_column_row">
-                                <label for="confirmation_status">CONFIRMATION STATUS</label>
-                                <textarea id="confirmation_status" name="confirmation_status"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
-                                <label for="gene_transcript">GENE (TRANSCRIPT)</label>
-                                <textarea id="gene_transcript" name="gene_transcript"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
-                                <label for="condition">CONDITION</label>
-                                <textarea id="condition" name="condition"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
-                                <label for="genomic_coordinates">GENOMIC COORDINATES</label>
-                                <textarea id="genomic_coordinates" name="genomic_coordinates"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
-                                <label for="variant">VARIANT</label>
-                                <textarea id="variant" name="variant"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
-                                <label for="zygosity">ZYGOSITY*</label>
-                                <textarea id="zygosity" name="zygosity"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
+                    {% if report_type == "SNV" %}
+                        <section class="subsection">
+                            <h3>SEQUENCE VARIANT</h3>
+                            <div class="sequence_variant">
+                                <div class="six_column_row">
+                                    <div id="cnt_div_confirmation_status" class="control_group">
+                                        <label for="confirmation_status">CONFIRMATION STATUS</label>
+                                        <textarea id="confirmation_status" name="confirmation_status"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
+                                    </div>
+                                    <div id="cnt_div_gene_transcript" class="control_group">
+                                        <label for="gene_transcript">GENE (TRANSCRIPT)</label>
+                                        <textarea id="gene_transcript" name="gene_transcript"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
+                                    </div>
+                                    <div id="cnt_div_condition" class="control_group">
+                                        <label for="condition">CONDITION</label>
+                                        <textarea id="condition" name="condition"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
+                                    </div>
+                                    <div id="cnt_div_genomic_coordinates" class="control_group">
+                                        <label for="genomic_coordinates">GENOMIC COORDINATES</label>
+                                        <textarea id="genomic_coordinates" name="genomic_coordinates"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
+                                    </div>
+                                    <div id="cnt_div_variant" class="control_group">
+                                        <label for="variant">VARIANT</label>
+                                        <textarea id="variant" name="variant"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
+                                    </div>
+                                    <div id="cnt_div_zygosity" class="control_group">
+                                        <label for="zygosity">ZYGOSITY*</label>
+                                        <textarea id="zygosity" name="zygosity"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
+                                    </div>
+                                </div>
+                                <div class="sequence_variant_notes">
+                                    <textarea id="sequence_variant_notes" name="sequence_variant_notes"  cols="190" rows="3" wrap="hard" maxlength="570"></textarea>
+                                </div>
                             </div>
-                            <div class="sequence_variant_notes">
-                                <textarea id="sequence_variant_notes" name="sequence_variant_notes"  cols="190" rows="3" wrap="hard" maxlength="570"></textarea>
+                        </section>
+                    {% endif %}
+                    {% if report_type == "CNV" %}
+                    <section class="subsection">
+                        <h3>COPY NUMBER VARIANT</h3>
+                        <div class="copy_number_variant">
+                            <div class="six_column_row">
+                                <div id="cnt_div_variant_status" class="control_group">
+                                    <label for="variant_status">VARIANT STATUS</label>
+                                    <textarea id="variant_status" name="variant_status"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
+                                </div>
+                                <div id="cnt_div_variant" class="control_group">
+                                    <label for="variant">VARIANT</label>
+                                    <textarea id="variant" name="variant"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
+                                </div>
+                                <div id="cnt_div_condition" class="control_group">
+                                    <label for="condition">CONDITION</label>
+                                    <textarea id="condition" name="condition"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
+                                </div>
+                                <div id="cnt_div_size" class="control_group">
+                                    <label for="size">SIZE</label>
+                                    <textarea id="size" name="size"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
+                                </div>
+                                <div id="cnt_div_genes" class="control_group">
+                                    <label for="genes">GENES</label>
+                                    <textarea id="genes" name="genes"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
+                                </div>
+                                <div id="cnt_div_event" class="control_group">
+                                    <label for="event">EVENT*</label>
+                                    <select id="event" name="event">
+                                        <option value="select">Select or write in</option>
+                                        <option value="deletion">Deletion</option>
+                                        <option value="duplication">Duplication</option>
+                                        <option value="triplication">Triplication</option>
+                                        <option value="see_text">See text</option>
+                                    </select>
+                                </div>
+                                <div id="cnt_div_classification" class="control_group">
+                                    <label for="classification">CLASSIFICATION</label>
+                                    <textarea id="classification" name="classification"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
+                                </div>
                             </div>
                         </div>
                     </section>
+                {% endif %}
                     <section class="subsection">
-                        <label for="interpretation"><h3>INTERPRETATION</h3></label>
-                        <div>
+                        <div id="cnt_div_interpretation" class="control_group">
+                            <label for="interpretation"><h3>INTERPRETATION</h3></label>
+                            <div>
+                            </div>
                             <textarea id="interpretation" name="interpretation"  cols="110" rows="5" wrap="hard" maxlength="560"></textarea>
                         </div>
                     </section>
                     <section class="subsection">
-                        <label for="methodology_limitations_regulatory_disclosures"><h3>METHODOLOGY, LIMITATIONS, & REGULATORY DISCLOSURES</h3></label>
-                        <div>
+                        <div id="cnt_div_methodology_limitations_regulatory_disclosures" class="control_group">
+                            <label for="methodology_limitations_regulatory_disclosures"><h3>METHODOLOGY, LIMITATIONS, & REGULATORY DISCLOSURES</h3></label>
+                            <div>
+                            </div>
                             <textarea id="methodology_limitations_regulatory_disclosures" name="methodology_limitations_regulatory_disclosures"  cols="110" rows="9" wrap="hard" maxlength="990"></textarea>
                         </div>
                     </section>
                 </div>
                 {% with page_number=1, max_pages=2 %}
-                {% include 'page_footer.html' %}
+                    {% include 'page_footer.html' %}
                 {% endwith %}
             </div>
             <div class="mypage">
@@ -118,26 +212,35 @@
                                 Senior Director Clinical Operations 
                             </div>
                             <div class="approve_panel">
-                                <label for="approved_by">Test results reviewed and approved by:</label>
-                                <select type="text" id="approved_by" name="approved_by">
-                                    <option value="Select">-select lab director-</option>
-                                    <option value="kellsworth">Kasia Ellsworth, PhD, FACMG, CGMB</option>
-                                    <option value="lguidugli">Lucia Guidugli, PhD, FACMG, CGMB</option>
-                                    <option value="mtokita">Mari Tokita, PhD, FACMG, CGMB</option>
-                                    <option value="aramalingam">Arivudainambi Ramalingam, PhD, FACMG</option>
-                                    <option value="jtanaka">Joy Tanaka, PhD</option>
-                                </select>
-                                <input type="text" id="lab_director_title" name="lab_director_title" value="-lab director title-"/>
+                                <div id="cnt_div_approved_by" class="control_group">
+                                    <label for="approved_by">Test results reviewed and approved by:</label>
+                                    <select type="text" id="approved_by" name="approved_by">
+                                        <option value="Select">-select lab director-</option>
+                                        <option value="kellsworth">Kasia Ellsworth, PhD, FACMG, CGMB</option>
+                                        <option value="lguidugli">Lucia Guidugli, PhD, FACMG, CGMB</option>
+                                        <option value="mtokita">Mari Tokita, PhD, FACMG, CGMB</option>
+                                        <option value="aramalingam">Arivudainambi Ramalingam, PhD, FACMG</option>
+                                        <option value="jtanaka">Joy Tanaka, PhD</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <div id="cnt_div_approve_panel_other" class="control_group hrz_control_group">
+                                        <label for="approve_panel_other">Other</label>
+                                        <input id="approve_panel_other" name="approve_panel_other" type="text" />
+                                    </div>
+                                </div>
+                                <div id="cnt_div_lab_director_title" class="control_group">
+                                    <input type="text" id="lab_director_title" name="lab_director_title" value="-lab director title-"/>
+                                </div>
                             </div>
                         </div>
                     </section>
                 </div>
                 {% with page_number=2, max_pages=2 %}
-                {% include 'page_footer.html' %}
+                    {% include 'page_footer.html' %}
                 {% endwith %}
             </div>
         </form>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="./index.js"></script>
+        <script src="{{ url_for('static', filename='index.js')}}"></script>
     </body>
 </html>

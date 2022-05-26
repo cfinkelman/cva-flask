@@ -1,176 +1,204 @@
+:root{
+  --color-dark-blue: #003DA5; 
+  --color-medium-blue: #009CA6;
+  --color-light-blue: #4fc0e8;
+  --color-purple: #9e5fa7;
+  --color-yello: #fbdc00;
+}
+
 .coolblue{
-    color: #1177aa;
-    color: #184d87;
-  }
-  .teal{
-    color: #01a4b3
-  }
+  color: var(--color-dark-blue);
+}
+
+.teal{
+  color: var(--color-medium-blue);
+}
   
-  .align_center{
-    text-align: center;
-  }
-  
-  .align_right{
-    text-align: right;
-  }
-  
-  body{
-      margin:0in;
-      padding:0in;
-      display: grid;
-      box-sizing: border-box;
-  }
-  
-  h3, h4{
-    margin: 0;
-  }
-  
-  @media only screen and (min-width: 8.5in) {
-      body {
-        background-color: #999999;
-        justify-content: center;
-        font-family: 'Roboto', Arial, Helvetica, sans-serif;
-      }
+.align_center{
+  text-align: center;
+}
+
+.align_right{
+  text-align: right;
+}
+
+body{
+    margin:0in;
+    padding:0in;
+    display: grid;
+    box-sizing: border-box;
+}
+
+h3, h4{
+  margin: 0;
+}
+
+@media only screen and (min-width: 8.5in) {
+    body {
+      background-color: #999999;
+      justify-content: center;
+      font-family: 'Roboto', Arial, Helvetica, sans-serif;
     }
-  
-  .mypage{
-      background: white;
-      width: 8.5in;
-      height: 11in;
-      padding: 0.25in;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      margin: 5px;
   }
-  
-  header{
+
+.mypage{
+    background: white;
+    width: 8.5in;
+    height: 11in;
+    padding: 0.25in;
     display: grid;
-    grid-template-columns: auto auto auto;
-    margin: 20px 0px;
-  }
-  header .logo{
-    object-fit: cover;
-    width: 120px;
-  }
-  header h4{
-    font-size: 0.7em;
-  }
-  header span{
-    color: #01a4b3;
-  }
-  header p{
-    font-size: 0.8em;
-    margin: 7px;
-  }
-  
-  footer{
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: 1fr 1fr;
-    justify-content: space-between;
-    text-align: center;
-    font-size: 8pt;
-  }
-  
-  footer input{
-    text-align: center;
-    background-color: white;
-  }
-  
-  footer label{
-    color: #01a4b3;
-  }
-  
-  section{
-    margin: 20px 0;
-  }
-  
-  /* inputs */
-  input, select, textarea{
-    background-color: lavender;
-    border: none;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-size: 9pt;
-    resize: none;
-  }
-  input:focus, select:focus, textarea:focus{
-    background-color: white;
-  }
-  .control_panel{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    font-size: 6pt;
-    font-weight: bolder;
-    border-top: 2px solid  #01a4b3;
-    border-bottom: 2px solid  #01a4b3;
-    padding: 5px;
-  }
-  .col{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 2px;
-    align-items: center;
-    align-content: start;
-  }
-  
-  .test_results_section{
-    background-color: #e0f0f4;
-    padding: 10px 10px 0px 10px;
-  }
-  
-  .test_results{
-    display: grid;
-    grid-template-rows: 1fr;
-  }
-  
-  .subsection h3{
-    margin: 0;
-    color: #184d87;
-    font-weight: normal;
-  }
-  
-  .subsection>div{
-    display: grid;
-    grid-template-rows: 1fr;
-    border-top: 2px solid #01a4b3;
-    padding-top: 3px;
-  }
-  
-  .sequence_variant{
-    font-size: 9pt;
-    font-weight: bold;
-  }
-  
-  .six_column_row{
-    display: grid;
-    grid-template-columns: repeat(6, auto);
-    grid-template-rows: auto 1fr;
-    grid-auto-flow: column;    justify-content: stretch;
-    align-items: end;
-    gap: 2px;
-  }
-  
-  .sequence_variant_notes{
-    padding: 3px 0px;
-    font-size: 6pt;
-    display: grid;
-    grid-row: 1fr;
-  }
-  
-  .two_column_row{
-    display: grid;
-    grid-template-columns: auto auto;
-    align-content: space-around;
-    text-align: center;
-  }
-  
-  .two_column_row div{
-    margin: 45px;
-  }
-  
-  .approve_panel{
-    display: grid;
-    grid-auto-flow: row;
-  }
+    grid-template-rows: auto 1fr auto;
+    margin: 5px;
+}
+
+header{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 20px 0px;
+}
+header .logo{
+  object-fit: cover;
+  width: 120px;
+}
+header h4{
+  font-size: 0.7em;
+}
+header span{
+  color: #01a4b3;
+}
+header p{
+  font-size: 0.8em;
+  margin: 7px;
+}
+
+footer{
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 8pt;
+}
+
+footer input{
+  text-align: center;
+  background-color: white;
+}
+
+footer label{
+  color: #01a4b3;
+}
+
+section{
+  margin: 20px 0;
+}
+
+/* inputs */
+input, select, textarea{
+  background-color: lavender;
+  border: none;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 9pt;
+  resize: none;
+}
+input:focus, select:focus, textarea:focus{
+  background-color: white;
+}
+label{
+  padding-left: 2px;
+}
+.control_panel{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  font-size: 6pt;
+  font-weight: bolder;
+  border-top: 2px solid  #01a4b3;
+  border-bottom: 2px solid  #01a4b3;
+  padding: 5px;
+}
+.col{
+  display: grid;
+  gap: 2px;
+  align-items: center;
+  align-content: start;
+}
+
+.test_results_section{
+  background-color: #e0f0f4;
+  padding: 10px 10px 0px 10px;
+}
+
+.test_results{
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.subsection h3{
+  margin: 0;
+  color: var(--color-dark-blue);
+  font-weight: normal;
+}
+
+.subsection>div{
+  border-top: 2px solid #01a4b3;
+  padding-top: 3px;
+}
+
+.sequence_variant{
+  font-size: 9pt;
+  font-weight: bold;
+}
+
+.six_column_row{
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-auto-flow: column;    justify-content: stretch;
+  align-items: end;
+  gap: 2px;
+}
+
+.sequence_variant_notes{
+  padding: 3px 0px;
+  font-size: 6pt;
+  display: grid;
+  grid-row: 1fr;
+}
+
+.two_column_row{
+  display: grid;
+  grid-template-columns: auto auto;
+  align-content: space-around;
+  text-align: center;
+}
+
+.two_column_row>div{
+  margin: 45px;
+}
+
+.approve_panel{
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.has-error label{
+  color: #a94442;
+}
+
+.has-error input, .has-error textarea, .has-error select{
+  border: 2px solid  #a94442;;
+}
+
+.control_group{
+  display: grid;
+}
+.hrz_control_group{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+}
+
+select[value="other"] { 
+  background-color: yellow;
+}

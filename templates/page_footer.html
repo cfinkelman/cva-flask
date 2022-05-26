@@ -1,10 +1,10 @@
 <footer>
-    <label for="patient">Patient</label>
-    <input type="text" name="patient" id="patient${pageNumber}"/>
-    <label for="case_id">Case ID</label>
-    <input type="text" name="case_id" id="case_id${pageNumber}">
-    <label for="dob">DOB</label>
-    <input type="text" name="dob" id="dob${pageNumber}" />
-    <label for="page_number">Page</label>
-    <input type="text" name="page_number" id="page_number{{page_number}}" value="{{page_number}} of {{max_pages}}" />
+    <label for="patient${pageNumber}">Patient</label>
+    <input type="text" name="patient${pageNumber}" id="patient${pageNumber}"  data-id="patient_name"/>
+    <label for="case_id${pageNumber}">Case ID</label>
+    <input type="text" name="case_id${pageNumber}" id="case_id${pageNumber}" data-id="case_id" />
+    <label for="dob${pageNumber}">DOB</label>
+    <input type="date" name="dob${pageNumber}" id="dob${pageNumber}" data-id="dob" />
+    <label for="page_number{{page_number}}">Page</label>
+    <input type="text" name="page_number{{page_number}}" id="page_number{{page_number}}" value="{{page_number}} of {{max_pages}}" />
 </footer>
