@@ -16,6 +16,7 @@ Do we want to block changes to some preprop feilds?
 Do we want to display error messages for validation?
 How do we know a SNV is negative?
 CNV EVENT how is write in supposed to work?
+On SNV-POSITIVE we have a two section variant information do we need this?
 
 # Done
 prepop function

@@ -206,6 +206,10 @@ select[value="other"] {
   height: 2in;
 }
 
+.height3{
+  height: 3.5in;
+}
+
 p{
   font-size: 10pt;
 }

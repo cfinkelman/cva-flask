@@ -43,8 +43,10 @@ function populateData(data){
     const value = data[v].prepopValue;
     if(value !== undefined){
       const el = document.getElementById(v);
-      el.value = value;
-      if(el.dataset.id){ $(`input[data-id="${el.dataset.id}"]`).val(value); }
+      if(el){
+        el.value = value;
+        if(el.dataset.id){ $(`input[data-id="${el.dataset.id}"]`).val(value); }
+      }
     }
   });
 }

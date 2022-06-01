@@ -12,4 +12,3 @@ def report(report_type = ''):
         "report.html",
         report_type=report_type.upper()
     )
-

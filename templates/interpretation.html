@@ -3,6 +3,16 @@
         <label for="interpretation"><h5>INTERPRETATION</h5></label>
         <div>
         </div>
-        <textarea id="interpretation" name="interpretation" wrap="hard" class="height1"></textarea>
+        <textarea 
+            id="interpretation" 
+            name="interpretation" 
+            wrap="hard"
+            {% if report_type == "SNV-EXTERNAL" or report_type == "SNV-NEGATIVE" %}
+                class="height1"
+            {% else %}
+                class="height3"
+            {% endif %}
+            >
+        </textarea>
     </div>
 </section>

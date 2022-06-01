@@ -1,0 +1,78 @@
+<section class="subsection">
+    <h3 class="coolblue">RCIGM Custom Variant Analysis Report</h3>
+    <div class="control_panel">
+        <div class="col">
+            <div id="cnt_div_patient_name" class="control_group hrz_control_group">
+                <label for="patient_name">PATIENT NAME</label>
+                <input type="text" id="patient_name" name="patient_name" data-id="patient_name" />
+            </div>
+            <div id="cnt_div_sex" class="control_group hrz_control_group">
+                <label for="sex" >SEX</label>
+                <select type="text" id="sex" name="sex">
+                    <option value="Select">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="notspecified">Not Specified</option>
+                </select>
+            </div>
+            <div id="cnt_div_date_of_birth" class="control_group hrz_control_group">
+                <label for="date_of_birth" >DATE OF BIRTH</label>
+                <input type="date" id="date_of_birth" name="date_of_birth" data-id="dob" />
+            </div>
+            <div id="cnt_div_indication_for_testing" class="control_group hrz_control_group">
+                <label for="indication_for_testing" >INDICATION FOR TESTING</label>
+                <input type="text" id="indication_for_testing" name="indication_for_testing" />
+            </div>
+            <div id="cnt_div_test_type" class="control_group hrz_control_group">
+                <label for="test_type" >TEST TYPE</label>
+                <textarea id="test_type" name="test_type" cols="32" rows="2" wrap="hard" maxlength="58"></textarea>
+            </div>
+        </div>
+        <div class="col">
+            <div id="cnt_div_ordering_provider" class="control_group hrz_control_group">
+                <label for="ordering_provider">ORDERING PROVIDER</label>
+                <input type="text" id="ordering_provider" name="ordering_provider" />
+            </div>
+            <div id="cnt_div_hospital" class="control_group hrz_control_group">
+                <label for="hospital">HOSPITAL</label>
+                <textarea id="hospital" name="hospital" cols="32" rows="2" wrap="hard" maxlength="58"></textarea>
+            </div>
+            <div id="cnt_div_specimen" class="control_group hrz_control_group">
+                <label for="specimen">SPECIMEN</label>
+                <select type="text" id="specimen" name="specimen">
+                    <option value="select">Select</option>
+                    <option value="blood">Blood</option>
+                    <option value="saliva">Saliva</option>
+                    <option value="dna">DNA (Extracted)</option>
+                </select>
+            </div>
+            <div id="cnt_div_collected" class="control_group hrz_control_group">
+                <label for="collected">COLLECTED</label>
+                <input type="date" id="collected" name="collected" />
+            </div>
+            <div id="cnt_div_received" class="control_group hrz_control_group">
+                <label for="received">RECEIVED</label>
+                <input type="date" id="received" name="received" />
+            </div>
+        </div>
+        <div class="col">
+            <div id="cnt_div_case_id" class="control_group hrz_control_group">
+                <label for="case_id">RCIGM CASE ID</label>
+                <input type="text" id="case_id" name="case_id" data-id="case_id" />
+            </div>
+            
+                <div id="cnt_div_index_family_member_id" class="control_group hrz_control_group">
+                    <label for="index_family_member_id">
+                        {% if report_type == "SNV-EXTERNAL" %} INDEX FAMILY MEMBER ID
+                        {% else %} ORIGINAL RCIGM PROBAND ID
+                        {% endif %}
+                    </label>
+                    <input type="text" id="index_family_member_id" name="index_family_member_id" />
+                </div>
+            <div id="cnt_div_report_date" class="control_group hrz_control_group">
+                <label for="report_date">REPORT DATE</label>
+                <input type="date" id="report_date" name="report_date" />
+            </div>
+        </div>
+    </div>
+</section>

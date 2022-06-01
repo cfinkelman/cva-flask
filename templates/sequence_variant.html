@@ -3,7 +3,7 @@
     <div class="sequence_variant">
         <div class="many_column_row">
             <div>
-                {% if report_type == "SNV-EXTERNAL" %} CONFIRMATION STATUS
+                {% if report_type == "SNV-EXTERNAL" or  report_type == "MITO" %} CONFIRMATION STATUS
                 {% else %} VARIANT STATUS
                 {% endif %}
             </div>
@@ -11,8 +11,13 @@
             <div>CONDITION</div>
             <div>GENOMIC COORDINATES</div>
             <div>VARIANT</div>
-            <div>ZYGOSITY*</div>
-            {% if report_type != "SNV" %}
+            {% if report_type == "MITO" %}
+                <div>HETEROPLASMY LEVEL</div>
+            {% else %}
+                <div>ZYGOSITY*</div>
+            {% endif %}
+            
+            {% if report_type != "SNV-EXTERNAL" %}
                 <div>CLASSIFICATION</div>
             {% endif %}
         </div>
@@ -32,9 +37,15 @@
             <div id="cnt_div_variant" class="control_group">
                 <textarea id="variant" name="variant" wrap="hard" maxlength="22"></textarea>
             </div>
-            <div id="cnt_div_zygosity" class="control_group">
-                <textarea id="zygosity" name="zygosity" wrap="hard" maxlength="22"></textarea>
-            </div>
+            {% if report_type == "MITO" %}
+                <div id="cnt_div_heteroplasmy_level" class="control_group">
+                    <textarea id="heteroplasmy_level" name="heteroplasmy_level" wrap="hard" maxlength="22"></textarea>
+                </div>
+            {% else %}
+                <div id="cnt_div_zygosity" class="control_group">
+                    <textarea id="zygosity" name="zygosity" wrap="hard" maxlength="22"></textarea>
+                </div>
+            {% endif %}
             {% if report_type != "SNV-EXTERNAL" %}
                 <div id="cnt_div_classification" class="control_group">
                     <textarea id="classification" name="classification" wrap="hard" maxlength="22"></textarea>
@@ -66,8 +77,10 @@
                 </div>
             </div>
         {% endif %}
-        <div class="sequence_variant_notes" >
-            <textarea id="sequence_variant_notes" name="sequence_variant_notes"  wrap="hard" maxlength="570" class="sequence_variant_notes"></textarea>
-        </div>
+        {% if report_type != "SNV-POSITIVE" and report_type != "MITO" %}
+            <div class="sequence_variant_notes" >
+                <textarea id="sequence_variant_notes" name="sequence_variant_notes"  wrap="hard" maxlength="570" class="sequence_variant_notes"></textarea>
+            </div>
+        {% endif %}
     </div>
 </section>

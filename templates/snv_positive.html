@@ -1,0 +1,32 @@
+<div class="mypage"> 
+    {% include 'page_header.html' %}
+    <div class="main_content">
+        {% include 'rcigm.html' %}
+        {% include 'results.html' %}
+        {% include 'sequence_variant.html' %}
+        {% include 'interpretation.html' %}
+    </div>
+    {% with page_number=1, max_pages=2 %}
+        {% include 'page_footer.html' %}
+    {% endwith %}
+</div>
+<div class="mypage">
+        {% include 'page_header.html' %}
+        <div class="main_content">
+            {% include 'references.html' %}
+            {% include 'recommendations.html' %}
+        </div>
+        {% with page_number=2, max_pages=2 %}
+            {% include 'page_footer.html' %}
+        {% endwith %}
+</div>
+<div class="mypage">
+        {% include 'page_header.html' %}
+        <div class="main_content">
+            {% include 'methodology.html' %}
+            {% include 'approve.html' %}
+        </div>
+        {% with page_number=2, max_pages=2 %}
+            {% include 'page_footer.html' %}
+        {% endwith %}
+</div>
