@@ -4,6 +4,7 @@ import re
 
 app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
+app.config["CACHE_TYPE"] = "null"
 
 @app.route("/report/<report_type>")
 def report(report_type = ''):

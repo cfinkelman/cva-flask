@@ -15,7 +15,7 @@ const controleIdsAndInfo = {
   index_family_member_id: { prepopValue: 'index_family_member_id' },
   report_date: { prepopValue: new Date().toISOString().substring(0,10) } ,
   test_results: { prepopValue: 'test_results' },
-  confirmation_status: { prepopValue: 'confirmation_status' },
+  confirmation_status: {},
   gene_transcript: { prepopValue: 'gene_transcript' },
   condition: { prepopValue: 'condition' },
   genomic_coordinates: { prepopValue: 'genomic_coordinates' },
@@ -23,7 +23,7 @@ const controleIdsAndInfo = {
   zygosity: { prepopValue: 'zygosity' },
   sequence_variant_notes: { prepopValue: 'sequence_variant_notes' },
   interpretation: { prepopValue: 'interpretation' },
-  methodology_limitations_regulatory_disclosures: { prepopValue: 'methodology_limitations_regulatory_disclosures' },
+  methodology_limitations_regulatory_disclosures: {},
   approved_by: { prepopValue: 'approved_by' },
   approved_by_other: { key: 'approved_by' },
 }

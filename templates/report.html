@@ -98,41 +98,8 @@
                             <textarea id="test_results" name="test_results"  wrap="hard" class="height1"></textarea>
                         </div>
                     </section>
-                    {% if report_type == "SNV" %}
-                        <section class="subsection">
-                            <h5>SEQUENCE VARIANT</h5>
-                            <div class="sequence_variant">
-                                <div class="many_column_row">
-                                    <div id="cnt_div_confirmation_status" class="control_group">
-                                        <label for="confirmation_status">CONFIRMATION STATUS</label>
-                                        <textarea id="confirmation_status" name="confirmation_status"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
-                                    </div>
-                                    <div id="cnt_div_gene_transcript" class="control_group">
-                                        <label for="gene_transcript">GENE (TRANSCRIPT)</label>
-                                        <textarea id="gene_transcript" name="gene_transcript"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
-                                    </div>
-                                    <div id="cnt_div_condition" class="control_group">
-                                        <label for="condition">CONDITION</label>
-                                        <textarea id="condition" name="condition"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
-                                    </div>
-                                    <div id="cnt_div_genomic_coordinates" class="control_group">
-                                        <label for="genomic_coordinates">GENOMIC COORDINATES</label>
-                                        <textarea id="genomic_coordinates" name="genomic_coordinates"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
-                                    </div>
-                                    <div id="cnt_div_variant" class="control_group">
-                                        <label for="variant">VARIANT</label>
-                                        <textarea id="variant" name="variant"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
-                                    </div>
-                                    <div id="cnt_div_zygosity" class="control_group">
-                                        <label for="zygosity">ZYGOSITY*</label>
-                                        <textarea id="zygosity" name="zygosity"  cols="11" rows="2" wrap="hard" maxlength="22"></textarea>
-                                    </div>
-                                </div>
-                                <div class="sequence_variant_notes">
-                                    <textarea id="sequence_variant_notes" name="sequence_variant_notes"  cols="190" rows="3" wrap="hard" maxlength="570"></textarea>
-                                </div>
-                            </div>
-                        </section>
+                    {% if "SNV" in report_type %}
+                        {% include 'sequence_variant.html' %}
                     {% endif %}
                     {% if report_type == "CNV" %}
                     <section class="subsection">
@@ -177,68 +144,29 @@
                         </div>
                     </section>
                 {% endif %}
-                    <section class="subsection">
-                        <div id="cnt_div_interpretation" class="control_group">
-                            <label for="interpretation"><h5>INTERPRETATION</h5></label>
-                            <div>
-                            </div>
-                            <textarea id="interpretation" name="interpretation" wrap="hard" class="height1"></textarea>
-                        </div>
-                    </section>
-                    <section class="subsection">
-                        <div id="cnt_div_methodology_limitations_regulatory_disclosures" class="control_group">
-                            <label for="methodology_limitations_regulatory_disclosures"><h5>METHODOLOGY, LIMITATIONS, & REGULATORY DISCLOSURES</h5></label>
-                            <div>
-                            </div>
-                            <textarea id="methodology_limitations_regulatory_disclosures" name="methodology_limitations_regulatory_disclosures"  wrap="hard"  class="height2"></textarea>
-                        </div>
-                    </section>
+                    {% if report_type != "SNV-NEGATIVE" %}
+                        {% include 'interpretation.html' %}
+                    {% endif %}
+                    {% include 'methodology.html' %}
+                    {% if report_type == "SNV-NEGATIVE" %}
+                        {% include 'approve.html' %}
+                    {% endif %}
                 </div>
                 {% with page_number=1, max_pages=2 %}
                     {% include 'page_footer.html' %}
                 {% endwith %}
             </div>
-            <div class="mypage">
-                {% include 'page_header.html' %}
-                <div class="main_content">
-                    <section class="subsection">
-                        <div class="two_column_row">
-                            <div>
-                                Lucia Guidugli, PhD, FACMG, CGMB<br />
-                                Clinical Laboratory Director
-                            </div>
-                            <div>
-                                Katarzyna (Kasia) Ellsworth, PhD, FACMG, CGMB<br />
-                                Senior Director Clinical Operations 
-                            </div>
-                            <div class="approve_panel">
-                                <div id="cnt_div_approved_by" class="control_group">
-                                    <label for="approved_by">Test results reviewed and approved by:</label>
-                                    <select type="text" id="approved_by" name="approved_by">
-                                        <option value="Select">-select lab director-</option>
-                                        <option value="kellsworth">Kasia Ellsworth, PhD, FACMG, CGMB</option>
-                                        <option value="lguidugli">Lucia Guidugli, PhD, FACMG, CGMB</option>
-                                        <option value="mtokita">Mari Tokita, PhD, FACMG, CGMB</option>
-                                        <option value="aramalingam">Arivudainambi Ramalingam, PhD, FACMG</option>
-                                        <option value="jtanaka">Joy Tanaka, PhD</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                    <div id="cnt_div_approve_panel_other" class="control_group hrz_control_group">
-                                        <label for="approve_panel_other">Other</label>
-                                        <input id="approve_panel_other" name="approve_panel_other" type="text" />
-                                    </div>
-                                </div>
-                                <div id="cnt_div_lab_director_title" class="control_group">
-                                    <input type="text" id="lab_director_title" name="lab_director_title" value="-lab director title-"/>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+            {% if report_type != "SNV-NEGATIVE" %}
+                <div class="mypage">
+                    {% include 'page_header.html' %}
+                    <div class="main_content">
+                        {% include 'approve.html' %}
+                    </div>
+                    {% with page_number=2, max_pages=2 %}
+                        {% include 'page_footer.html' %}
+                    {% endwith %}
                 </div>
-                {% with page_number=2, max_pages=2 %}
-                    {% include 'page_footer.html' %}
-                {% endwith %}
-            </div>
+            {% endif %}
         </form>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="{{ url_for('static', filename='index.js')}}"></script>

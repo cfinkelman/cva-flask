@@ -26,11 +26,12 @@ change Index Family Member to Input Label
 change Report Date Label to Input
 other forms
 other option for director
+calculable fields
 
 # Templates
-Template CVA External Lab_1 SNV (1).pdf => SNV
-Template CVA External Lab_1 SNV.pdf => SNV
-Template CVA_1 CNV positive.pdf
-Template CVA_1 Mito positive.pdf
-Template CVA_1 SNV positive.pdf
-Template CVA_2 SNV negative.pdf
+Template CVA External Lab_1 SNV (1).pdf => SNV-EXTERNAL
+Template CVA External Lab_1 SNV.pdf => SNV-EXTERNAL
+Template CVA_2 SNV negative.pdf => SNV-NEGATIVE
+Template CVA_1 SNV positive.pdf => SNV-POSITIVE
+Template CVA_1 CNV positive.pdf => CNV almost the same as SNV-positive
+Template CVA_1 Mito positive.pdf => MITO

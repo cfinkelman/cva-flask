@@ -1,0 +1,22 @@
+<section class="subsection">
+    <div id="cnt_div_methodology_limitations_regulatory_disclosures" class="control_group">
+        {% if report_type == "SNV-EXTERNAL" %}
+            <label for="methodology_limitations_regulatory_disclosures"><h5>METHODOLOGY, LIMITATIONS, & REGULATORY DISCLOSURES</h5></label>
+            <textarea id="methodology_limitations_regulatory_disclosures" name="methodology_limitations_regulatory_disclosures"  wrap="hard"  class="height2">
+            </textarea>
+        {% else %}
+            <h5>METHODOLOGY, LIMITATIONS, & REGULATORY DISCLOSURES</h5>
+            <div>
+                <p>Genomic positions for which analysis was requested were amplified from genomic DNA by PCR.  
+                    Resultant amplified DNA underwent dideoxy sequencing with fluorescent terminators. 
+                    This report describes the results of sequence analysis performed only at the genomic loci requested by the ordering party.  
+                    Other regions of the gene and genome were not analyzed. Genomic coordinates refer to GRChr37.</p>
+                <p>This test was developed and its performance characteristics determined by the Rady Children's Institute for Genomic Medicine  - Clinical Genome Center.  
+                    It has not been cleared or approved by the U.S. Food and Drug Administration.  
+                    The FDA has determined that such clearance or approval is not necessary.  
+                    This test is used for clinical purposes. Clinical correlation and genetic counseling are recommended.  
+                    This laboratory is certified under the Clinical Laboratory Improvement Amendments as qualified to perform high complexity clinical laboratory testing.</p>
+            </div>
+        {% endif %}
+    </div>
+</section>

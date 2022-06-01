@@ -1,0 +1,73 @@
+<section class="subsection">
+    <h5>SEQUENCE VARIANT</h5>
+    <div class="sequence_variant">
+        <div class="many_column_row">
+            <div>
+                {% if report_type == "SNV-EXTERNAL" %} CONFIRMATION STATUS
+                {% else %} VARIANT STATUS
+                {% endif %}
+            </div>
+            <div>GENE (TRANSCRIPT)</div>
+            <div>CONDITION</div>
+            <div>GENOMIC COORDINATES</div>
+            <div>VARIANT</div>
+            <div>ZYGOSITY*</div>
+            {% if report_type != "SNV" %}
+                <div>CLASSIFICATION</div>
+            {% endif %}
+        </div>
+        <div class="many_column_row">
+            <div id="cnt_div_confirmation_status" class="control_group">
+                <textarea id="confirmation_status" name="confirmation_status" wrap="hard" maxlength="22"> Variant {% if report_type == "SNV-NEGATIVE" %} Not {% endif %} Detected</textarea>
+            </div>
+            <div id="cnt_div_gene_transcript" class="control_group">
+                <textarea id="gene_transcript" name="gene_transcript" wrap="hard" maxlength="22"></textarea>
+            </div>
+            <div id="cnt_div_condition" class="control_group">
+                <textarea id="condition" name="condition" wrap="hard" maxlength="22"></textarea>
+            </div>
+            <div id="cnt_div_genomic_coordinates" class="control_group">
+                <textarea id="genomic_coordinates" name="genomic_coordinates" wrap="hard" maxlength="22"></textarea>
+            </div>
+            <div id="cnt_div_variant" class="control_group">
+                <textarea id="variant" name="variant" wrap="hard" maxlength="22"></textarea>
+            </div>
+            <div id="cnt_div_zygosity" class="control_group">
+                <textarea id="zygosity" name="zygosity" wrap="hard" maxlength="22"></textarea>
+            </div>
+            {% if report_type != "SNV-EXTERNAL" %}
+                <div id="cnt_div_classification" class="control_group">
+                    <textarea id="classification" name="classification" wrap="hard" maxlength="22"></textarea>
+                </div>
+            {% endif %}
+        </div>
+        {% if report_type == "SNV-NEGATIVE" %}
+            <div class="many_column_row">
+                <div id="cnt_div_confirmation_status2" class="control_group">
+                    <textarea id="confirmation_status2" name="confirmation_status" wrap="hard" maxlength="22">Variant Not Detected</textarea>
+                </div>
+                <div id="cnt_div_gene_transcript2" class="control_group">
+                    <textarea id="gene_transcript2" name="gene_transcript" wrap="hard" maxlength="22"></textarea>
+                </div>
+                <div id="cnt_div_condition2" class="control_group">
+                    <textarea id="condition2" name="condition" wrap="hard" maxlength="22"></textarea>
+                </div>
+                <div id="cnt_div_genomic_coordinates2" class="control_group">
+                    <textarea id="genomic_coordinates2" name="genomic_coordinates" wrap="hard" maxlength="22"></textarea>
+                </div>
+                <div id="cnt_div_variant2" class="control_group">
+                    <textarea id="variant2" name="variant" wrap="hard" maxlength="22"></textarea>
+                </div>
+                <div id="cnt_div_zygosity2" class="control_group">
+                    <textarea id="zygosity2" name="zygosity" wrap="hard" maxlength="22"></textarea>
+                </div>
+                <div id="cnt_div_classification2" class="control_group">
+                    <textarea id="classification2" name="classification" wrap="hard" maxlength="22"></textarea>
+                </div>
+            </div>
+        {% endif %}
+        <div class="sequence_variant_notes" >
+            <textarea id="sequence_variant_notes" name="sequence_variant_notes"  wrap="hard" maxlength="570" class="sequence_variant_notes"></textarea>
+        </div>
+    </div>
+</section>
